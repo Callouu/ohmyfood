@@ -1,0 +1,13 @@
+.header {
+    width: 100%;
+    height: 63px;
+    @include header-center;
+    @include header-shadow;
+
+    .header__logo {
+        @include header-center;
+    
+    }
+}
+
+
