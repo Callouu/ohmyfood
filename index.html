@@ -12,23 +12,117 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" type="text/css" href="public/style.css">
-    <title>Document</title>
+    <title>OhMyFood</title>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <img class="header__logo" src="images/logo/ohmyfood@2x.svg" alt="logo">
     </div>
     </header>
     <main>
+        <!-- Localisation -->
         <section class="localisation">
             <i class="fas fa-map-marker-alt localisation__icon"></i>
-            <input class="localisation__text">Paris, Belleville</input>
+            <input class="localisation__text" type="text" name="ville" placeholder="Ville, Pays" value="Paris, Belleville"></input>
         </section>
+        <!-- About -->
         <section class="about">
             <h2 class="about__title">Réservez le menu qui vous convient</h2>
             <p class="about__subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <a class="about__btn">Explorer nos restaurants</a>
+            <a class="about__btn">Explorer nos restaurants</a> 
         </section>
+        <!-- Steps -->
+        <section class="steps">
+            <h2 class="steps__title">Fonctionnement</h2>
+            <ol class="steps__list">
+                <li class="step">
+                    <i class="fa-solid fa-mobile-screen-button step__icon"></i>
+                    <h3 class="step__title">Choisissez un restaurant</h3>
+                    <span class="step__number">1</span>
+                </li>
+            </ol>
+            <ol class="steps__list">
+                <li class="step">
+                    <i class="fa-solid fa-list-ul step__icon"></i>
+                    <h3 class="step__title">Choisissez un restaurant</h3>
+                    <span class="step__number">2</span>
+                </li>
+            </ol>
+            <ol class="steps__list">
+                <li class="step">
+                    <i class="fa-solid fa-store step__icon"></i>
+                    <h3 class="step__title">Choisissez un restaurant</h3>
+                    <span class="step__number">3</span>
+                </li>
+            </ol>
+        </section>
+        <!-- Restaurants -->
+        <section class="restaurants">
+            <div class="container">
+              <h2 class="restaurants__title">Restaurants</h2>
+              
+              <div class="cards">
+                <a class="card" href="./menu-pages/la-palette-du-gout.html">
+                  <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="plat du menu du restaurant la palette du goût" class="card__img">
+                  <span class="card__badge">Nouveau</span>
+                  <div class="card__footer">
+                    <div class="card__content">
+                      <h3 class="card__title">La palette du goût</h3>
+                      <span class="card__subtitle">Ménilmontant</span>
+                    </div>
+                    <div class="menu__btn card__btn">
+                      <i class="card__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
+                      <i class="card__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
+                    </div>
+                  </div>
+                </a>
+          
+                <a class="card" href="./menu-pages/la-note-enchantee.html">
+                  <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="plat du menu du restaurant la note enchantée" class="card__img">
+                  <span class="card__badge">Nouveau</span>
+                  <div class="card__footer">
+                    <div class="card__content">
+                      <h3 class="card__title">La note enchantée</h3>
+                      <span class="card__subtitle">Charonne</span>
+                    </div>
+                    <div class="menu__btn card__btn">
+                      <i class="card__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
+                      <i class="card__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
+                    </div>
+                  </div>
+                </a>
+          
+                <a class="card" href="./menu-pages/a-la-francaise.html">
+                  <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="plat du menu du restaurant à la francaise" class="card__img">
+                  <div class="card__footer">
+                    <div class="card__content">
+                      <h3 class="card__title">À la française</h3>
+                      <span class="card__subtitle">Cité Rouge</span>
+                    </div>
+                    <div class="menu__btn card__btn">
+                      <i class="card__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
+                      <i class="card__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
+                    </div>
+                  </div>
+                </a>
+          
+                <a class="card" href="./menu-pages/le-delice-des-sens.html">
+                  <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="plat du menu du restaurant les délices des sens" class="card__img">
+                  <div class="card__footer">
+                    <div class="card__content">
+                      <h3 class="card__title">Le délice des sens</h3>
+                      <span class="card__subtitle">Folie-Méricourt</span>
+                    </div>
+                    <div class="menu__btn card__btn">
+                      <i class="card__like menu__like menu__like--noBg far fa-heart fa-2x"></i>
+                      <i class="card__like menu__like menu__like--bg fas fa-heart fa-2x"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
     </main>
     <footer class="footer">
     </footer>

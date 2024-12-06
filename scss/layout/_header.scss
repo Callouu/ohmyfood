@@ -1,11 +1,14 @@
 .header {
     width: 100%;
     height: 63px;
-    @include header-center;
+    @include flex-center;
     @include header-shadow;
+    @include desktop__responsive {
+        height: 96px;
+    }
 
     .header__logo {
-        @include header-center;
+        @include flex-center;
     
     }
 }

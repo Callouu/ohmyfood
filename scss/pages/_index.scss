@@ -1,0 +1,84 @@
+.localisation {
+    background-color: $gray-medium;
+    height: 50px;
+    @include flex-center;
+    @include localisation-shadow;   
+    gap: 17px;
+
+    &__icon {
+        color: $black;
+    }
+
+    &__text {
+        width: 112px;
+        border: none;
+        background-color: $gray-medium;
+        color: $black;
+        font-size: 1rem;
+        font-weight: map-get($font-weight,medium);
+    }
+}
+
+.about {
+    padding: 2rem;
+    text-align: center;
+    background-color: $gray-light;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: map-get($font-weight,bold);
+    }
+
+    &__subtitle {
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        font-weight: map-get($font-weight,light);
+        color: $black;
+    }
+}
+
+
+.steps {
+    padding: $globalpadding;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: map-get($font-weight,bold);
+    }
+}
+
+.step {   
+    cursor: pointer;
+    padding: 1.5rem;
+    margin: 1.5rem 0 1.5rem 0.75rem;
+    border-radius: 1.25rem;
+    background-color: $gray-light;
+    display: flex;
+    position: relative;
+    align-items: center;
+    @include general-shadow;
+
+    &__title {
+        font-size: 1rem;
+    }
+
+    &__icon {
+        font-weight: map-get($font-weight,extrabold);
+        margin-right: 1rem;
+        color: $gray;
+        @include flex-center;
+    }
+
+    &__number {
+        width: 1.6rem;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        border-radius: 50%;
+        font-size: 0.8rem;
+        position: absolute;
+        left: -0.75rem;
+        background: $color-primary;
+        color: $white;
+        @include flex-center;
+    }
+}
