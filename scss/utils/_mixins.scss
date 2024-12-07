@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /******** Box Shadow ********/
 
 @mixin header-shadow {
@@ -39,7 +41,6 @@
 
 /******** Responsive ********/
 
-
 @mixin table__responsive {
     @media all and (min-width: map-get($breakpoints, table)) {
         @content;
@@ -48,6 +49,26 @@
 
 @mixin desktop__responsive {
     @media all and (min-width: map-get($breakpoints, desktop)) {
-        @content
+        @content;
+    }
+}
+
+/******** Button ********/
+
+@mixin button($type) {
+    border: 0;
+    padding: 0.80rem 1.5rem;
+    font-weight: map-get($font-weight,medium);
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: $white;
+    background-color: rgb(104, 104, 104);
+    background-image: linear-gradient(0deg, color.scale($color-primary, $alpha: -10%) 0%, color.scale($color-secondary, $alpha: -10%) 100%);
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        background-color: $white;
     }
 }

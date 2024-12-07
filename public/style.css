@@ -5,6 +5,7 @@
 /******** Box Shadow ********/
 /******** Center ********/
 /******** Responsive ********/
+/******** Button ********/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,13 +56,19 @@ table {
   border-spacing: 0;
 }
 
-* {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body, html {
   font-family: "Roboto", sans-serif;
 }
 
 .header {
   width: 100%;
   height: 63px;
+  transition: all 1s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,17 +79,77 @@ table {
 @media all and (min-width: 1024px) {
   .header {
     height: 96px;
+    transition: all 1s;
   }
 }
 .header .header__logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.8rem;
+  font-family: "Shrikhand", "cursive";
 }
 
 body {
   width: 100%;
   margin: auto;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+@media all and (min-width: 1024px) {
+  .footer .container {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem 0 1.6rem 0;
+  }
+}
+.footer__logo {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.1rem;
+  color: #FFF;
+  margin: 1rem 0;
+}
+@media all and (min-width: 1024px) {
+  .footer__logo {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .footer__content {
+    display: flex;
+    gap: 7px;
+  }
+}
+.footer__list {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+.footer__list:nth-last-child(-n+2) {
+  font-weight: 400;
+}
+@media all and (min-width: 1024px) {
+  .footer__list:nth-last-of-type(2) {
+    margin-left: 25px;
+  }
+}
+.footer__link {
+  color: #FFF;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
 }
 
 .localisation {
@@ -100,16 +167,19 @@ body {
   color: #353535;
 }
 .localisation__text {
-  width: 112px;
+  width: 120px;
   border: none;
   background-color: #EAEAEA;
   color: #353535;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
+}
+.localisation__text:focus {
+  outline: none;
 }
 
 .about {
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
   background-color: #F6F6F6;
 }
@@ -117,19 +187,52 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
 }
+@media all and (min-width: 1024px) {
+  .about__title {
+    font-size: 2.5rem;
+  }
+}
 .about__subtitle {
   font-size: 1.1rem;
-  margin: 1.5rem 0;
+  margin: 1.6rem 0 2.4rem 0;
   font-weight: 300;
   color: #353535;
 }
+.about__btn {
+  border: 0;
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #FFF;
+  background-color: rgb(104, 104, 104);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.about__btn:hover {
+  background-color: #FFF;
+}
+
+.container {
+  max-width: 1280px;
+  position: relative;
+  margin: auto;
+}
 
 .steps {
-  padding: 1rem;
+  padding: 3rem 1rem;
 }
 .steps__title {
   font-size: 1.5rem;
   font-weight: 700;
+}
+@media all and (min-width: 1024px) {
+  .steps__list {
+    display: flex;
+    gap: 1.5rem;
+  }
 }
 
 .step {
@@ -144,6 +247,11 @@ body {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+@media all and (min-width: 1024px) {
+  .step {
+    flex: 1;
+  }
 }
 .step__title {
   font-size: 1rem;
@@ -169,6 +277,72 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.fa-store {
+  color: #9356DC;
+}
+
+.restaurants {
+  padding: 4rem 1rem;
+  background-color: #EAEAEA;
+}
+.restaurants__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+}
+@media all and (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background-color: #FFF;
+  border-radius: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  display: block;
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.card__img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.card__new {
+  padding: 0.5rem;
+  background-color: #99E2D0;
+  color: rgb(27.4503816794, 96.5496183206, 79.5114503817);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.card__content {
+  flex: 1;
+}
+.card__title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+.card__subtitle {
+  font-weight: 300;
+}
+.card__footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
