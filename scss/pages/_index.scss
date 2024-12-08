@@ -82,7 +82,6 @@
     position: relative;
     align-items: center;
     @include general-shadow;
-
     @include desktop__responsive {
         flex: 1;
     }
@@ -181,5 +180,36 @@
         align-items: center;
         position: relative;
         padding: 1rem;     
+    }
+
+    &__btn {
+        height: 2rem;
+        width: 2rem;
+        background-color: transparent;
+        border: transparent 0px solid;
+        @include flex-center;
+    }
+}
+
+.card__like {
+
+    &:hover {
+        font-weight: 700;
+        background-image: $linear-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -moz-background-clip: text;
+        animation: full-heart 300ms ease-in-out both;
+    }
+
+    &:focus {
+        font-weight: 700;
+        background-image: $linear-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -moz-background-clip: text;
+        animation: full-heart 300ms ease-in-out both;
     }
 }

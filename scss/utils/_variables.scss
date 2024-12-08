@@ -10,6 +10,8 @@ $gray-light: #F6F6F6;
 $gray-medium: #EAEAEA;
 $gray: #7E7E7E;
 
+$linear-gradient: linear-gradient(180deg, $color-secondary, $color-primary);
+
 /******** Text ********/
 $font-weight: (
     light: 300,
