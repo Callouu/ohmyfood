@@ -1,0 +1,185 @@
+.header {
+    &__menu {
+        position: relative;
+    }
+
+    &__previous {
+        position: absolute;
+        left: 2rem;
+        height: 2rem;
+        width: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        color: $black;
+        @include flex-center;
+      }
+}
+
+.img__menu {
+    width: 100%;
+    max-width: 100%;
+    max-height: 32rem;
+    object-fit: cover;
+  }
+
+.menu {
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: $gray-light;
+    position: relative;
+
+    @include desktop__responsive {
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 2rem 0rem 1rem;
+
+        @include desktop__responsive {
+            @include flex-center;
+            gap: 1.5rem;
+        }
+    }
+
+    &__title {
+        font-family: "Shrikhand", "cursive";
+        font-size: 1.7rem;
+    }
+
+    &__btn {
+        height: 2rem;
+        width: 2rem;
+        cursor: pointer;
+    }
+}
+
+.menuBtn {
+    &__btn {
+        @include button (primary);
+    }
+  }
+
+.menu__list {
+
+        @include desktop__responsive {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+    }
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem 0.8rem;
+    animation: card-appear 0.5s;
+    animation-fill-mode: both;
+
+    @include desktop__responsive {
+        width: 50%;
+        justify-content: center;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+        padding-top: 2.6rem;
+    }
+
+    &__line {
+        width: 40px;
+        border-bottom: 3px solid $color-tertiary;
+    }
+}
+
+/** Delay **/
+@for $i from 0 through 2 {  
+    .submenu-#{$i} {
+        animation-delay: #{$i * 0.5}s;
+    }
+}
+
+.menuCard {
+    display:flex;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    max-width: 100%;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    overflow: hidden;
+    @include general-shadow;
+
+    &__content {
+        flex: 1;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow:hidden;
+    }
+    
+    &__title {
+        font-weight: map-get($font-weight,bold);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow:hidden;
+    }
+
+    &__description {
+        font-weight: map-get($font-weight,light);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-top: 0.3rem;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        font-weight: map-get($font-weight,bold);
+        padding-left: 0.5rem;
+        padding-right: 0.8rem;
+    }
+
+    &__confirm {
+        background-color: $color-tertiary;
+        width: 4rem;
+        height: auto;
+        @include flex-center;
+        margin: -2rem -5rem -2rem 0rem;
+        transition-duration: 0.5s;
+    }
+
+    &:hover &__confirm {
+        margin-right: -1rem;
+    }
+
+    &__contentIcon {
+        background-color: $white;
+        border-radius: 100%;
+        height: 1.6rem;
+        width: 1.6rem;
+        transform: rotate(180deg);
+        transition-duration: 0.5s;
+        @include flex-center;
+
+        &--icon {
+            color: $color-tertiary;
+        }
+    }
+
+    &:hover &__contentIcon {
+        transform: rotate(0);
+    }
+}
+
+.menuBtn {
+    padding: 2.5rem 0rem;
+    @include flex-center;
+}
