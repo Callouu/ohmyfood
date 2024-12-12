@@ -4,25 +4,16 @@
 /******** Responsive ********/
 /******** Box Shadow ********/
 /******** Center ********/
+/** @mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+} **/
 /******** Responsive ********/
 /******** Button ********/
 /******** Menu Appear ********/
-@keyframes full-heart {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes full-heart-reverse {
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0.5;
-  }
-}
 @keyframes card-appear {
   from {
     opacity: 0;
@@ -93,6 +84,7 @@ body, html {
 }
 
 .header {
+  position: relative;
   width: 100%;
   height: 63px;
   display: flex;
@@ -121,13 +113,13 @@ body {
 .footer {
   background-color: #353535;
 }
-.footer .container {
+.footer .footer__container {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 @media all and (min-width: 1024px) {
-  .footer .container {
+  .footer .footer__container {
     flex-direction: row-reverse;
     justify-content: flex-start;
     align-items: center;
@@ -144,13 +136,14 @@ body {
   .footer__logo {
     margin-bottom: 0;
     margin-top: 0;
-    margin-left: 20px;
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
 }
 @media all and (min-width: 1024px) {
   .footer__content {
     display: flex;
-    gap: 7px;
+    gap: 10px;
   }
 }
 .footer__list {
@@ -183,9 +176,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   gap: 17px;
 }
 .localisation__icon {
@@ -207,6 +197,14 @@ body {
   padding: 2.5rem;
   text-align: center;
   background-color: #F6F6F6;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media all and (min-width: 1024px) {
+  .about {
+    box-shadow: none;
+  }
 }
 .about__title {
   font-size: 1.5rem;
@@ -230,14 +228,14 @@ body {
   font-size: 1.1rem;
   border-radius: 100px;
   color: #FFF;
-  background-color: rgb(104, 104, 104);
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  opacity: 1;
 }
 .about__btn:hover {
-  background-color: #FFF;
+  opacity: 0.8;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -263,7 +261,7 @@ body {
 
 .step {
   cursor: pointer;
-  padding: 1.5rem;
+  padding: 1.7rem;
   margin: 1.5rem 0 1.5rem 0.75rem;
   border-radius: 1.25rem;
   background-color: #F6F6F6;
@@ -326,6 +324,7 @@ body {
 @media all and (min-width: 1024px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 6rem;
   }
 }
 
@@ -364,7 +363,7 @@ body {
 .card__subtitle {
   font-weight: 300;
 }
-.card__footer {
+.card__bottom {
   display: flex;
   align-items: center;
   position: relative;
@@ -372,27 +371,34 @@ body {
   padding: 1rem;
 }
 .card__btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
+  cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  left: -1rem;
 }
-
-.card__like {
-  animation: full-heart-reverse 300ms ease-in-out both;
+.card__btn--outline {
+  position: absolute;
 }
-.card__like:hover {
-  font-weight: 700;
-  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
-  background-clip: text;
+.card__btn--fill {
+  position: absolute;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -moz-background-clip: text;
-  animation: full-heart 300ms ease-in-out both;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+.card__btn:hover .card__btn--outline {
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+}
+.card__btn:hover .card__btn--fill {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .header__menu {
@@ -450,9 +456,39 @@ body {
   font-size: 1.7rem;
 }
 .menu__btn {
-  height: 2rem;
-  width: 2rem;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -1rem;
+}
+@media all and (min-width: 1024px) {
+  .menu__btn {
+    left: 0;
+    padding-left: 20px;
+  }
+}
+.menu__btn--outline {
+  position: absolute;
+}
+.menu__btn--fill {
+  position: absolute;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.menu__btn:hover .menu__btn--outline {
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+}
+.menu__btn:hover .menu__btn--fill {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .menuBtn__btn {
@@ -462,14 +498,14 @@ body {
   font-size: 1.1rem;
   border-radius: 100px;
   color: #FFF;
-  background-color: rgb(104, 104, 104);
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  opacity: 1;
 }
 .menuBtn__btn:hover {
-  background-color: #FFF;
+  opacity: 0.8;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -486,7 +522,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 0rem 0.8rem;
-  animation: card-appear 0.5s;
+  animation: card-appear 0.5s both ease-in-out;
   animation-fill-mode: both;
 }
 @media all and (min-width: 1024px) {
@@ -511,11 +547,11 @@ body {
 }
 
 .submenu-1 {
-  animation-delay: 0.5s;
+  animation-delay: 0.7s;
 }
 
 .submenu-2 {
-  animation-delay: 1s;
+  animation-delay: 1.4s;
 }
 
 .menuCard {

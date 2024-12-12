@@ -1,7 +1,7 @@
 .footer {
     background-color: $black;
 
-    .container {
+    .footer__container {
         display: flex;
         flex-direction: column;
         padding: $globalpadding;
@@ -22,14 +22,15 @@
         @include desktop__responsive {
             margin-bottom: 0;
             margin-top: 0;
-            margin-left: 20px;
+            margin-left: 6rem;
+            margin-right: 6rem;
         }
       }
 
       &__content {
         @include desktop__responsive {
             display: flex;
-            gap: 7px;
+            gap: 10px;
         }
       }
 

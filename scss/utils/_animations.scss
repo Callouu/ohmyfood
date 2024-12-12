@@ -1,24 +1,3 @@
-@keyframes full-heart {
-	0% {
-		opacity: .5;
-	}
-    
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes full-heart-reverse {
-	100% {
-		opacity: 1;
-	}
-	
-	0% {
-		opacity: .5;
-	}
-    
-}
-
 @keyframes card-appear {
 	from {
 		opacity: 0;

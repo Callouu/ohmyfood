@@ -1,8 +1,7 @@
 .localisation {
     background-color: $gray-medium;
     height: 50px;
-    @include flex-center;
-    @include localisation-shadow;   
+    @include flex-center;  
     gap: 17px;
 
 
@@ -28,6 +27,11 @@
     padding: 2.5rem;
     text-align: center;
     background-color: $gray-light;
+    @include localisation-shadow; 
+
+    @include desktop__responsive {
+        box-shadow: none;
+    }
 
     &__title {
         font-size: 1.5rem;
@@ -74,7 +78,7 @@
 
 .step {   
     cursor: pointer;
-    padding: 1.5rem;
+    padding: 1.7rem;
     margin: 1.5rem 0 1.5rem 0.75rem;
     border-radius: 1.25rem;
     background-color: $gray-light;
@@ -133,6 +137,7 @@
 
     @include desktop__responsive {
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 6rem;
     }
 }
 
@@ -175,7 +180,7 @@
         font-weight: map-get($font-weight,light);
     }
 
-    &__footer {
+    &__bottom {
         display: flex;
         align-items: center;
         position: relative;
@@ -184,25 +189,37 @@
     }
 
     &__btn {
-        height: 2rem;
-        width: 2rem;
-        background-color: transparent;
-        border: transparent 0px solid;
+        cursor: pointer;
+        position:relative;
         @include flex-center;
-    }
-}
+        left: -1rem;
 
-.card__like {
-    animation: full-heart-reverse 300ms ease-in-out both;
+        &--outline {
+            position: absolute;
+        }
 
-    &:hover {
-        font-weight: 700;
-        background-image: $linear-gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-        -moz-background-clip: text;
-        animation: full-heart 300ms ease-in-out both;
+        &--fill {
+            position: absolute;
+            background: $linear-gradient;
+            -webkit-background-clip: text;;
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transform: scale(0);
+            transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+            .card__btn--outline {
+                background: $linear-gradient;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .card__btn--fill {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     }
 }
