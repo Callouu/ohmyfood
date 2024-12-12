@@ -24,6 +24,60 @@
     transform: translateY(0);
   }
 }
+@keyframes loader-appear {
+  50% {
+    opacity: 0.8;
+  }
+  99% {
+    z-index: 21;
+  }
+  100% {
+    opacity: 0;
+    z-index: -20;
+  }
+}
+@keyframes text-appear {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+}
+@keyframes last-text-appear {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0px);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -81,6 +135,56 @@ a {
 
 body, html {
   font-family: "Roboto", sans-serif;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #FFF;
+  opacity: 0.9;
+  z-index: 100;
+  animation: loader-appear 4s ease-in-out both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__content {
+  width: 500px;
+  height: 100px;
+  font-size: 60px;
+  overflow: hidden;
+  font-family: "Shrikhand", "cursive";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__content--text {
+  position: absolute;
+  animation: text-appear 0.5s both ease-in-out;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+.loader__content--text:last-child {
+  animation: last-text-appear 0.8s ease-in-out both;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}
+.loader__content .delay-0 {
+  animation-delay: 0s;
+}
+.loader__content .delay-1 {
+  animation-delay: 0.5s;
+}
+.loader__content .delay-2 {
+  animation-delay: 1s;
+}
+.loader__content .delay-3 {
+  animation-delay: 1.5s;
+}
+
+.delay-4 {
+  animation: last-text-appear 1s ease-in-out both;
 }
 
 .header {

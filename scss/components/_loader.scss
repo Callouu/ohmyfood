@@ -1,0 +1,45 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+    opacity: 0.9;
+    z-index: 100;
+    animation: loader-appear 4s ease-in-out both;
+    @include flex-center;
+}
+
+.loader__content {
+    width: 500px;
+    height: 100px;
+    font-size: 60px;
+    overflow: hidden;
+    font-family: "Shrikhand", "cursive";
+    position: relative;
+    @include flex-center;
+
+    &--text {
+        position: absolute;
+        animation: text-appear 0.5s both ease-in-out;
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+
+        &:last-child {
+            animation: last-text-appear 0.8s ease-in-out both;
+            animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        }
+    }
+
+    @for $i from 0 through 3 {  
+        .delay-#{$i} {
+            animation-delay: #{$i * 0.5}s;
+        }
+    }
+
+}
+
+.delay-4 {
+    animation: last-text-appear 1s ease-in-out both;
+}
+
+
+
