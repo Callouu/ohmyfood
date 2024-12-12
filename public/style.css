@@ -384,20 +384,19 @@ body {
 .card__btn--fill {
   position: absolute;
   background: linear-gradient(180deg, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transform: scale(0);
   transition: 0.3s ease-in-out;
 }
 .card__btn:hover .card__btn--outline {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 .card__btn:hover .card__btn--fill {
-  transform: scale(1);
   opacity: 1;
 }
 
@@ -487,7 +486,6 @@ body {
   color: transparent;
 }
 .menu__btn:hover .menu__btn--fill {
-  transform: scale(1);
   opacity: 1;
 }
 
