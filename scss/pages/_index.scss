@@ -7,7 +7,7 @@
 .localisation {
     background-color: variables.$gray-medium;
     height: 50px;
-    @include mixins.flex-center;  
+    @include flex-center;  
     gap: 17px;
 
 
@@ -33,9 +33,9 @@
     padding: 2.5rem;
     text-align: center;
     background-color: variables.$gray-light;
-    @include mixins.localisation-shadow; 
+    @include localisation-shadow; 
 
-    @include mixins.desktop__responsive {
+    @include desktop__responsive {
         box-shadow: none;
     }
 
@@ -43,7 +43,7 @@
         font-size: 1.5rem;
         font-weight: map.get(variables.$font-weight,bold);
 
-        @include mixins.desktop__responsive {
+        @include desktop__responsive {
             font-size: 2.5rem;
         }    
     }
@@ -52,11 +52,11 @@
         font-size: 1.1rem;
         margin: 1.6rem 0 2.4rem 0;
         font-weight: map.get(variables.$font-weight,light);
-        color: variables.$black;
+        color: $black;
     }
 
     &__btn {
-        @include mixins.button (primary);
+        @include button (primary);
     }
 }
 
@@ -75,7 +75,7 @@
     }
 
     &__list {
-        @include mixins.desktop__responsive {
+        @include desktop__responsive {
             display: flex;
             gap: 1.5rem;
         }
@@ -91,8 +91,8 @@
     display: flex;
     position: relative;
     align-items: center;
-    @include mixins.general-shadow;
-    @include mixins.desktop__responsive {
+    @include general-shadow;
+    @include desktop__responsive {
         flex: 1;
     }
 
@@ -105,7 +105,7 @@
         font-weight: map.get(variables.$font-weight,extrabold);
         margin-right: 1rem;
         color: variables.$gray;
-        @include mixins.flex-center;
+        @include flex-center;
     }
 
     &__number {
@@ -118,7 +118,7 @@
         left: -0.75rem;
         background: variables.$color-primary;
         color: variables.$white;
-        @include mixins.flex-center;
+        @include flex-center;
     }
 }
 
@@ -141,19 +141,19 @@
     display: grid;
     gap: 2rem;
 
-    @include mixins.desktop__responsive {
+    @include desktop__responsive {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 6rem;
     }
 }
 
 .card {
-    background-color: variables.$white;
+    background-color: $white;
     border-radius: 1rem;
     grid-template-columns: repeat(1, 1fr);
     display: block;
     position: relative;
-    @include mixins.general-shadow;
+    @include general-shadow;
 
     &__img {
         width: 100%;
@@ -164,7 +164,7 @@
 
     &__new {
         padding: 0.5rem;
-        background-color: variables.$color-tertiary;
+        background-color: $color-tertiary;
         color: color.scale(variables.$color-tertiary, $lightness: -50%);
         position: absolute;
         top: 1rem;
@@ -197,7 +197,7 @@
     &__btn {
         cursor: pointer;
         position:relative;
-        @include mixins.flex-center;
+        @include flex-center;
         left: -1rem;
 
         &--outline {
@@ -216,7 +216,7 @@
 
         &:hover {
             .card__btn--outline {
-                background: variables.$linear-gradient;
+                background: $linear-gradient;
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;

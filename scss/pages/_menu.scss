@@ -16,8 +16,8 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 1.2rem;
-        color: variables.$black;
-        @include mixins.flex-center;
+        color: $black;
+        @include flex-center;
       }
 }
 
@@ -31,10 +31,10 @@
 .menu {
     margin-top: -4rem;
     border-radius: 2rem 2rem 0 0;
-    background-color: variables.$gray-light;
+    background-color: $gray-light;
     position: relative;
 
-    @include mixins.desktop__responsive {
+    @include desktop__responsive {
         margin-left: 12rem;
         margin-right: 12rem;
     }
@@ -45,8 +45,8 @@
         justify-content: space-between;
         padding: 2rem 2rem 0rem 1rem;
 
-        @include mixins.desktop__responsive {
-            @include mixins.flex-center;
+        @include desktop__responsive {
+            @include flex-center;
             gap: 1.5rem;
         }
     }
@@ -59,10 +59,10 @@
     &__btn {
         cursor: pointer;
         position:relative;
-        @include mixins.flex-center;
+        @include flex-center;
         left: -1rem;
 
-        @include mixins.desktop__responsive {
+        @include desktop__responsive {
             left: 0;
             padding-left: 20px;
         }
@@ -73,7 +73,7 @@
 
         &--fill {
             position: absolute;
-            background: variables.$linear-gradient;
+            background: $linear-gradient;
             -webkit-background-clip: text;;
             background-clip: text;
             color: transparent;
@@ -83,7 +83,7 @@
 
         &:hover {
             .menu__btn--outline {
-                background: variables.$linear-gradient;
+                background: $linear-gradient;
                 background-clip: text;
                 color: transparent;
             }
@@ -97,13 +97,13 @@
 
 .menuBtn {
     &__btn {
-        @include mixins.button (primary);
+        @include button (primary);
     }
   }
 
 .menu__list {
 
-        @include mixins.desktop__responsive {
+        @include desktop__responsive {
             display:flex;
             flex-direction: column;
             align-items: center;
@@ -115,9 +115,9 @@
     flex-direction: column;
     justify-content: center;
     padding: 0rem 0.8rem;
-    @include mixins.card-appear;
+    @include card-appear;
 
-    @include mixins.desktop__responsive {
+    @include desktop__responsive {
         width: 50%;
         justify-content: center;
     }
@@ -130,7 +130,7 @@
 
     &__line {
         width: 40px;
-        border-bottom: 3px solid variables.$color-tertiary;
+        border-bottom: 3px solid $color-tertiary;
     }
 }
 
@@ -150,7 +150,7 @@
     border-radius: 0.75rem;
     cursor: pointer;
     overflow: hidden;
-    @include mixins.general-shadow;
+    @include general-shadow;
 
     &__content {
         flex: 1;
@@ -184,10 +184,10 @@
     }
 
     &__confirm {
-        background-color: variables.$color-tertiary;
+        background-color: $color-tertiary;
         width: 4rem;
         height: auto;
-        @include mixins.flex-center;
+        @include flex-center;
         margin: -2rem -5rem -2rem 0rem;
         transition-duration: 0.5s;
     }
@@ -197,16 +197,16 @@
     }
 
     &__contentIcon {
-        background-color: variables.$white;
+        background-color: $white;
         border-radius: 100%;
         height: 1.6rem;
         width: 1.6rem;
         transform: rotate(180deg);
         transition-duration: 0.5s;
-        @include mixins.flex-center;
+        @include flex-center;
 
         &--icon {
-            color: variables.$color-tertiary;
+            color: $color-tertiary;
         }
     }
 
@@ -217,6 +217,6 @@
 
 .menuBtn {
     padding: 2.5rem 0rem;
-    @include mixins.flex-center;
+    @include flex-center;
 }
 

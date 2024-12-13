@@ -64,8 +64,8 @@
     font-weight: map.get(variables.$font-weight,medium);
     font-size: 1.1rem;
     border-radius: 100px;
-    color: variables.$white;
-    background-image: variables.$linear-gradient;
+    color: $white;
+    background-image: $linear-gradient;
     cursor: pointer;
     transition-duration: 0.25s;
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);

@@ -2,6 +2,10 @@
 /******** Text ********/
 /******** Text ********/
 /******** Responsive ********/
+/******** Color ********/
+/******** Text ********/
+/******** Text ********/
+/******** Responsive ********/
 /******** Box Shadow ********/
 /******** Center ********/
 /** @mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
@@ -137,6 +141,22 @@ body, html {
   font-family: "Roboto", sans-serif;
 }
 
+/******** Color ********/
+/******** Text ********/
+/******** Text ********/
+/******** Responsive ********/
+/******** Box Shadow ********/
+/******** Center ********/
+/** @mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+} **/
+/******** Responsive ********/
+/******** Button ********/
+/******** Menu Appear ********/
 .loader {
   position: fixed;
   height: 100%;
@@ -187,6 +207,22 @@ body, html {
   animation: last-text-appear 1s ease-in-out both;
 }
 
+/******** Color ********/
+/******** Text ********/
+/******** Text ********/
+/******** Responsive ********/
+/******** Box Shadow ********/
+/******** Center ********/
+/** @mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+} **/
+/******** Responsive ********/
+/******** Button ********/
+/******** Menu Appear ********/
 .header {
   position: relative;
   width: 100%;
@@ -215,6 +251,22 @@ body {
   box-sizing: border-box;
 }
 
+/******** Color ********/
+/******** Text ********/
+/******** Text ********/
+/******** Responsive ********/
+/******** Box Shadow ********/
+/******** Center ********/
+/** @mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+} **/
+/******** Responsive ********/
+/******** Button ********/
+/******** Menu Appear ********/
 .footer {
   background-color: #353535;
 }
@@ -275,6 +327,22 @@ body {
   margin-right: 0.5rem;
 }
 
+/******** Color ********/
+/******** Text ********/
+/******** Text ********/
+/******** Responsive ********/
+/******** Box Shadow ********/
+/******** Center ********/
+/** @mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+} **/
+/******** Responsive ********/
+/******** Button ********/
+/******** Menu Appear ********/
 .localisation {
   background-color: #EAEAEA;
   height: 50px;
@@ -505,6 +573,22 @@ body {
   opacity: 1;
 }
 
+/******** Color ********/
+/******** Text ********/
+/******** Text ********/
+/******** Responsive ********/
+/******** Box Shadow ********/
+/******** Center ********/
+/** @mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-wrap: $flex-wrap;
+} **/
+/******** Responsive ********/
+/******** Button ********/
+/******** Menu Appear ********/
 .header__menu {
   position: relative;
 }
