@@ -1,12 +1,15 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .loader {
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: $white;
+    background-color: variables.$white;
     opacity: 0.9;
     z-index: 100;
     animation: loader-appear 4s ease-in-out both;
-    @include flex-center;
+    @include mixins.flex-center;
 }
 
 .loader__content {
@@ -16,7 +19,7 @@
     overflow: hidden;
     font-family: "Shrikhand", "cursive";
     position: relative;
-    @include flex-center;
+    @include mixins.flex-center;
 
     &--text {
         position: absolute;
@@ -24,7 +27,7 @@
         animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 
         &:last-child {
-            animation: last-text-appear 0.8s ease-in-out both;
+            animation: last-text-appear 0.5s ease-in-out both;
             animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
         }
     }

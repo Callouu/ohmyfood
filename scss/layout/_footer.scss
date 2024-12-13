@@ -1,12 +1,17 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+@use "sass:map";
+
 .footer {
-    background-color: $black;
+    background-color: variables.$black;
 
     .footer__container {
         display: flex;
         flex-direction: column;
-        padding: $globalpadding;
+        padding: variables.$globalpadding;
 
-        @include desktop__responsive {
+        @include mixins.desktop__responsive {
             flex-direction: row-reverse;
             justify-content: flex-start;
             align-items: center;
@@ -17,9 +22,9 @@
       &__logo {
         font-family: "Shrikhand", "cursive";
         font-size: 1.1rem;
-        color: $white;
+        color: variables.$white;
         margin: 1rem 0;
-        @include desktop__responsive {
+        @include mixins.desktop__responsive {
             margin-bottom: 0;
             margin-top: 0;
             margin-left: 6rem;
@@ -28,7 +33,7 @@
       }
 
       &__content {
-        @include desktop__responsive {
+        @include mixins.desktop__responsive {
             display: flex;
             gap: 10px;
         }
@@ -36,21 +41,21 @@
 
       &__list {
         margin: 0.5rem 0;
-        font-weight: map-get($font-weight,medium);
+        font-weight: map.get(variables.$font-weight,medium);
         
         &:nth-last-child(-n + 2) {
-            font-weight: map-get($font-weight,regular);
+            font-weight: map.get(variables.$font-weight,regular);
         }
 
         &:nth-last-of-type(2) {
-            @include desktop__responsive {
+            @include mixins.desktop__responsive {
                 margin-left: 25px;
             }
         }
       }
 
       &__link {
-        color: $white;
+        color: variables.$white;
         text-decoration: none;
 
         &:hover {

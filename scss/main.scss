@@ -1,11 +1,12 @@
-@import "utils/variables";
-@import "utils/mixins";
-@import "utils/animations";
-@import "base/reset";
-@import "base/typography";
-@import "components/loader";
-@import "layout/header";
-@import "layout/body";
-@import "layout/footer";
-@import "pages/index";
-@import "pages/menu";
+@use "utils/variables";
+@use "utils/mixins";
+@use "utils/animations";
+@use "base/reset";
+@use "base/typography";
+@use "components/loader";
+@use "layout/header";
+@use "layout/body";
+@use "layout/footer";
+@use "pages/index";
+@use "pages/menu";
+

@@ -1,21 +1,27 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+@use "sass:map";
+@use "sass:color";
+
 .localisation {
-    background-color: $gray-medium;
+    background-color: variables.$gray-medium;
     height: 50px;
-    @include flex-center;  
+    @include mixins.flex-center;  
     gap: 17px;
 
 
     &__icon {
-        color: $black;
+        color: variables.$black;
     }
 
     &__text {
         width: 120px;
         border: none;
-        background-color: $gray-medium;
-        color: $black;
+        background-color: variables.$gray-medium;
+        color: variables.$black;
         font-size: 1rem;
-        font-weight: map-get($font-weight,bold);
+        font-weight: map.get(variables.$font-weight,bold);
 
         &:focus {
             outline: none;
@@ -26,18 +32,18 @@
 .about {
     padding: 2.5rem;
     text-align: center;
-    background-color: $gray-light;
-    @include localisation-shadow; 
+    background-color: variables.$gray-light;
+    @include mixins.localisation-shadow; 
 
-    @include desktop__responsive {
+    @include mixins.desktop__responsive {
         box-shadow: none;
     }
 
     &__title {
         font-size: 1.5rem;
-        font-weight: map-get($font-weight,bold);
+        font-weight: map.get(variables.$font-weight,bold);
 
-        @include desktop__responsive {
+        @include mixins.desktop__responsive {
             font-size: 2.5rem;
         }    
     }
@@ -45,12 +51,12 @@
     &__subtitle {
         font-size: 1.1rem;
         margin: 1.6rem 0 2.4rem 0;
-        font-weight: map-get($font-weight,light);
-        color: $black;
+        font-weight: map.get(variables.$font-weight,light);
+        color: variables.$black;
     }
 
     &__btn {
-        @include button (primary);
+        @include mixins.button (primary);
     }
 }
 
@@ -65,11 +71,11 @@
 
     &__title {
         font-size: 1.5rem;
-        font-weight: map-get($font-weight,bold);
+        font-weight: map.get(variables.$font-weight,bold);
     }
 
     &__list {
-        @include desktop__responsive {
+        @include mixins.desktop__responsive {
             display: flex;
             gap: 1.5rem;
         }
@@ -81,12 +87,12 @@
     padding: 1.7rem;
     margin: 1.5rem 0 1.5rem 0.75rem;
     border-radius: 1.25rem;
-    background-color: $gray-light;
+    background-color: variables.$gray-light;
     display: flex;
     position: relative;
     align-items: center;
-    @include general-shadow;
-    @include desktop__responsive {
+    @include mixins.general-shadow;
+    @include mixins.desktop__responsive {
         flex: 1;
     }
 
@@ -96,10 +102,10 @@
     }
 
     &__icon {
-        font-weight: map-get($font-weight,extrabold);
+        font-weight: map.get(variables.$font-weight,extrabold);
         margin-right: 1rem;
-        color: $gray;
-        @include flex-center;
+        color: variables.$gray;
+        @include mixins.flex-center;
     }
 
     &__number {
@@ -110,23 +116,23 @@
         font-size: 0.8rem;
         position: absolute;
         left: -0.75rem;
-        background: $color-primary;
-        color: $white;
-        @include flex-center;
+        background: variables.$color-primary;
+        color: variables.$white;
+        @include mixins.flex-center;
     }
 }
 
 .fa-store {
-    color: $color-primary;
+    color: variables.$color-primary;
 }
 
 .restaurants {
     padding: 4rem 1rem ;
-    background-color: $gray-medium;
+    background-color: variables.$gray-medium;
 
     &__title {
         font-size: 1.5rem;
-        font-weight: map-get($font-weight,bold);
+        font-weight: map.get(variables.$font-weight,bold);
         margin-bottom: 20px;
     }
 }
@@ -135,19 +141,19 @@
     display: grid;
     gap: 2rem;
 
-    @include desktop__responsive {
+    @include mixins.desktop__responsive {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 6rem;
     }
 }
 
 .card {
-    background-color: $white;
+    background-color: variables.$white;
     border-radius: 1rem;
     grid-template-columns: repeat(1, 1fr);
     display: block;
     position: relative;
-    @include general-shadow;
+    @include mixins.general-shadow;
 
     &__img {
         width: 100%;
@@ -158,8 +164,8 @@
 
     &__new {
         padding: 0.5rem;
-        background-color: $color-tertiary;
-        color: darken($color-tertiary, 50%);
+        background-color: variables.$color-tertiary;
+        color: color.scale(variables.$color-tertiary, $lightness: -50%);
         position: absolute;
         top: 1rem;
         right: 1rem;
@@ -171,13 +177,13 @@
     }
 
     &__title {
-        font-weight: map-get($font-weight,bold);
+        font-weight: map.get(variables.$font-weight,bold);
         margin-bottom: 0.25rem;
         font-size: 1.1rem;
     }
 
     &__subtitle {
-        font-weight: map-get($font-weight,light);
+        font-weight: map.get(variables.$font-weight,light);
     }
 
     &__bottom {
@@ -191,7 +197,7 @@
     &__btn {
         cursor: pointer;
         position:relative;
-        @include flex-center;
+        @include mixins.flex-center;
         left: -1rem;
 
         &--outline {
@@ -200,7 +206,7 @@
 
         &--fill {
             position: absolute;
-            background: $linear-gradient;
+            background: variables.$linear-gradient;
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
@@ -210,7 +216,7 @@
 
         &:hover {
             .card__btn--outline {
-                background: $linear-gradient;
+                background: variables.$linear-gradient;
                 background-clip: text;
                 -webkit-background-clip: text;
                 color: transparent;
