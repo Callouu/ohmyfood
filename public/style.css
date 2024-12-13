@@ -137,7 +137,7 @@ a {
   color: inherit;
 }
 
-body, html {
+body, html, input {
   font-family: "Roboto", sans-serif;
 }
 
@@ -173,7 +173,7 @@ body, html {
 .loader__content {
   width: 500px;
   height: 100px;
-  font-size: 60px;
+  font-size: 50px;
   overflow: hidden;
   font-family: "Shrikhand", "cursive";
   position: relative;
@@ -355,7 +355,7 @@ body {
   color: #353535;
 }
 .localisation__text {
-  width: 120px;
+  width: 125px;
   border: none;
   background-color: #EAEAEA;
   color: #353535;

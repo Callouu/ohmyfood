@@ -5,21 +5,21 @@
 @use "sass:color";
 
 .localisation {
-    background-color: variables.$gray-medium;
+    background-color: $gray-medium;
     height: 50px;
     @include flex-center;  
     gap: 17px;
 
 
     &__icon {
-        color: variables.$black;
+        color: $black;
     }
 
     &__text {
-        width: 120px;
+        width: 125px;
         border: none;
-        background-color: variables.$gray-medium;
-        color: variables.$black;
+        background-color: $gray-medium;
+        color: $black;
         font-size: 1rem;
         font-weight: map.get(variables.$font-weight,bold);
 
@@ -87,7 +87,7 @@
     padding: 1.7rem;
     margin: 1.5rem 0 1.5rem 0.75rem;
     border-radius: 1.25rem;
-    background-color: variables.$gray-light;
+    background-color: $gray-light;
     display: flex;
     position: relative;
     align-items: center;
@@ -116,19 +116,19 @@
         font-size: 0.8rem;
         position: absolute;
         left: -0.75rem;
-        background: variables.$color-primary;
-        color: variables.$white;
+        background: $color-primary;
+        color: $white;
         @include flex-center;
     }
 }
 
 .fa-store {
-    color: variables.$color-primary;
+    color: $color-primary;
 }
 
 .restaurants {
     padding: 4rem 1rem ;
-    background-color: variables.$gray-medium;
+    background-color: $gray-medium;
 
     &__title {
         font-size: 1.5rem;
@@ -206,7 +206,7 @@
 
         &--fill {
             position: absolute;
-            background: variables.$linear-gradient;
+            background: $linear-gradient;
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
