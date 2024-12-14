@@ -206,20 +206,14 @@
 
         &--fill {
             position: absolute;
-            background: $linear-gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
             opacity: 0;
             transition: 0.3s ease-in-out;
+            @include btn-heart;
         }
 
         &:hover {
             .card__btn--outline {
-                background: $linear-gradient;
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
+                @include btn-heart;
             }
 
             .card__btn--fill {

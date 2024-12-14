@@ -17,6 +17,7 @@
 } **/
 /******** Responsive ********/
 /******** Button ********/
+/******** Heart Button ********/
 /******** Menu Appear ********/
 @keyframes card-appear {
   from {
@@ -29,6 +30,9 @@
   }
 }
 @keyframes loader-appear {
+  0% {
+    opacity: 0.8;
+  }
   50% {
     opacity: 0.8;
   }
@@ -42,7 +46,7 @@
 }
 @keyframes text-appear {
   0% {
-    transform: translateY(-150px);
+    transform: translateY(-100px);
     opacity: 0;
   }
   40% {
@@ -58,13 +62,13 @@
     opacity: 1;
   }
   100% {
-    transform: translateY(150px);
+    transform: translateY(100px);
     opacity: 0;
   }
 }
 @keyframes last-text-appear {
   0% {
-    transform: translateY(-150px);
+    transform: translateY(-100px);
     opacity: 0;
   }
   40% {
@@ -80,6 +84,20 @@
     transform: translateY(0px);
     transform: scale(1.1);
     opacity: 1;
+  }
+}
+@keyframes shadow-loader {
+  0% {
+    box-shadow: 0px 0px 50px rgb(147, 86, 220);
+    opacity: 0;
+  }
+  50% {
+    box-shadow: 0px 0px 50px rgb(147, 86, 220);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0px 0px 50px rgb(147, 86, 220);
+    opacity: 0;
   }
 }
 html, body, div, span, applet, object, iframe,
@@ -156,6 +174,7 @@ body, html, input {
 } **/
 /******** Responsive ********/
 /******** Button ********/
+/******** Heart Button ********/
 /******** Menu Appear ********/
 .loader {
   position: fixed;
@@ -222,6 +241,7 @@ body, html, input {
 } **/
 /******** Responsive ********/
 /******** Button ********/
+/******** Heart Button ********/
 /******** Menu Appear ********/
 .header {
   position: relative;
@@ -266,6 +286,7 @@ body {
 } **/
 /******** Responsive ********/
 /******** Button ********/
+/******** Heart Button ********/
 /******** Menu Appear ********/
 .footer {
   background-color: #353535;
@@ -342,6 +363,7 @@ body {
 } **/
 /******** Responsive ********/
 /******** Button ********/
+/******** Heart Button ********/
 /******** Menu Appear ********/
 .localisation {
   background-color: #EAEAEA;
@@ -401,7 +423,7 @@ body {
   font-size: 1.1rem;
   border-radius: 100px;
   color: #FFF;
-  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -556,15 +578,15 @@ body {
 }
 .card__btn--fill {
   position: absolute;
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
 }
 .card__btn:hover .card__btn--outline {
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -588,6 +610,7 @@ body {
 } **/
 /******** Responsive ********/
 /******** Button ********/
+/******** Heart Button ********/
 /******** Menu Appear ********/
 .header__menu {
   position: relative;
@@ -662,17 +685,18 @@ body {
 }
 .menu__btn--fill {
   position: absolute;
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
 .menu__btn:hover .menu__btn--outline {
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
   background-clip: text;
   color: transparent;
+  -webkit-background-clip: text;
 }
 .menu__btn:hover .menu__btn--fill {
   opacity: 1;
@@ -685,7 +709,7 @@ body {
   font-size: 1.1rem;
   border-radius: 100px;
   color: #FFF;
-  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   cursor: pointer;
   transition-duration: 0.25s;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -734,11 +758,11 @@ body {
 }
 
 .submenu-1 {
-  animation-delay: 0.7s;
+  animation-delay: 0.8s;
 }
 
 .submenu-2 {
-  animation-delay: 1.4s;
+  animation-delay: 1.6s;
 }
 
 .menuCard {

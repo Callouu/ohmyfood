@@ -61,7 +61,7 @@
 @mixin button($type) {
     border: 0;
     padding: 1rem 1.5rem;
-    font-weight: map.get(variables.$font-weight,medium);
+    font-weight: map.get($font-weight,medium);
     font-size: 1.1rem;
     border-radius: 100px;
     color: $white;
@@ -77,9 +77,21 @@
     }
 }
 
+/******** Heart Button ********/
+
+@mixin btn-heart {
+    background: $linear-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
 /******** Menu Appear ********/
 
-@mixin card-appear {
+@mixin list-appear {
 	animation: card-appear 0.5s both ease-in-out;
     animation-fill-mode: both;
 }
+
+
