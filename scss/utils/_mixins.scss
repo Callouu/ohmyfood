@@ -26,15 +26,6 @@
 
 /******** Center ********/
 
-/** @mixin flex($flex-direction, $align-items, $justify-content, $flex-wrap) {
-    display: flex;
-    flex-direction: $flex-direction;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    flex-wrap: $flex-wrap;
-} **/
-
-
 @mixin flex-center {
     display: flex;
     align-items: center;
@@ -94,4 +85,9 @@
     animation-fill-mode: both;
 }
 
+@mixin text-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
 

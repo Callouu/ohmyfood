@@ -155,23 +155,17 @@
 
     &__content {
         flex: 1;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow:hidden;
+        @include text-ellipsis;
     }
     
     &__title {
         font-weight: map.get(variables.$font-weight,bold);
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow:hidden;
+        @include text-ellipsis;
     }
 
     &__description {
         font-weight: map.get(variables.$font-weight,light);
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        @include text-ellipsis;
         padding-top: 0.3rem;
     }
 

@@ -5,8 +5,8 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: variables.$white;
-    opacity: 0.9;
+    background-color: $white;
+    opacity: 1;
     z-index: 100;
     animation: loader-appear 4s ease-in-out both;
     @include flex-center;
@@ -23,12 +23,10 @@
 
     &--text {
         position: absolute;
-        animation: text-appear 0.5s both ease-in-out;
-        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        animation: loader-icon-appear 0.5s both ease-in-out;
 
         &:last-child {
-            animation: last-text-appear 0.5s ease-in-out both;
-            animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+            animation: loader-text-appear 0.5s ease-in-out both;
         }
     }
 
@@ -37,11 +35,6 @@
             animation-delay: #{$i * 0.5}s;
         }
     }
-
-}
-
-.delay-4 {
-    animation: last-text-appear 1s ease-in-out both;
 }
 
 
