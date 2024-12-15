@@ -159,12 +159,12 @@
     }
     
     &__title {
-        font-weight: map.get(variables.$font-weight,bold);
+        font-weight: map.get($font-weight,bold);
         @include text-ellipsis;
     }
 
     &__description {
-        font-weight: map.get(variables.$font-weight,light);
+        font-weight: map.get($font-weight,light);
         @include text-ellipsis;
         padding-top: 0.3rem;
     }
@@ -173,7 +173,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        font-weight: map.get(variables.$font-weight,bold);
+        font-weight: map.get($font-weight,bold);
         padding-left: 0.5rem;
         padding-right: 0.8rem;
     }

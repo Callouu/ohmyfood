@@ -32,7 +32,7 @@
 .about {
     padding: 2.5rem;
     text-align: center;
-    background-color: variables.$gray-light;
+    background-color: $gray-light;
     @include localisation-shadow; 
 
     @include desktop__responsive {
@@ -41,7 +41,7 @@
 
     &__title {
         font-size: 1.5rem;
-        font-weight: map.get(variables.$font-weight,bold);
+        font-weight: map.get($font-weight,bold);
 
         @include desktop__responsive {
             font-size: 2.5rem;
@@ -51,7 +51,7 @@
     &__subtitle {
         font-size: 1.1rem;
         margin: 1.6rem 0 2.4rem 0;
-        font-weight: map.get(variables.$font-weight,light);
+        font-weight: map.get($font-weight,light);
         color: $black;
     }
 
@@ -71,7 +71,7 @@
 
     &__title {
         font-size: 1.5rem;
-        font-weight: map.get(variables.$font-weight,bold);
+        font-weight: map.get($font-weight,bold);
     }
 
     &__list {
@@ -102,7 +102,7 @@
     }
 
     &__icon {
-        font-weight: map.get(variables.$font-weight,extrabold);
+        font-weight: map.get($font-weight,extrabold);
         margin-right: 1rem;
         color: variables.$gray;
         @include flex-center;
@@ -132,7 +132,7 @@
 
     &__title {
         font-size: 1.5rem;
-        font-weight: map.get(variables.$font-weight,bold);
+        font-weight: map.get($font-weight,bold);
         margin-bottom: 20px;
     }
 }
@@ -177,13 +177,13 @@
     }
 
     &__title {
-        font-weight: map.get(variables.$font-weight,bold);
+        font-weight: map.get($font-weight,bold);
         margin-bottom: 0.25rem;
         font-size: 1.1rem;
     }
 
     &__subtitle {
-        font-weight: map.get(variables.$font-weight,light);
+        font-weight: map.get($font-weight,light);
     }
 
     &__bottom {
