@@ -12,7 +12,7 @@
 /******** Button ********/
 /******** Heart Button ********/
 /******** Menu Appear ********/
-@keyframes card-appear {
+@keyframes menu-appear {
   from {
     opacity: 0;
     transform: translateY(80px);
@@ -520,6 +520,7 @@ body {
 }
 .card__btn--outline {
   position: absolute;
+  transition: 0.3s ease-in-out;
 }
 .card__btn--fill {
   position: absolute;
@@ -671,7 +672,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 0rem 0.8rem;
-  animation: card-appear 0.5s both ease-in-out;
+  animation: menu-appear 0.5s both ease-in-out;
   animation-fill-mode: both;
 }
 @media all and (min-width: 1024px) {

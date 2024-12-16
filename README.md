@@ -4,5 +4,5 @@
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 ## Description
-Responsive website developed for device-first
+Responsive website developed for mobile-first
 

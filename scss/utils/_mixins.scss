@@ -80,7 +80,7 @@
 /******** Menu Appear ********/
 
 @mixin list-appear {
-	animation: card-appear 0.5s both ease-in-out;
+	animation: menu-appear 0.5s both ease-in-out;
     animation-fill-mode: both;
 }
 
